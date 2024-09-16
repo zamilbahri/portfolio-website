@@ -2,13 +2,14 @@
 
 import { motion } from 'framer-motion'
 import React from 'react'
+import SectionHeading from './section-heading';
 
 const About = () => {
 	return (
 		<motion.section
 			className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40'
 		>
-			<h2 className='text-3xl font-medium capitalize mb-8' >About me</h2>
+			<SectionHeading>About Me</SectionHeading>
 			<p>
 				I hold a BSc in Computer Science and Physics, with a diploma in Electronics Engineering. My professional experience includes a data engineering internship, where I honed my skills in backend development, ETL operations, and data analysis, using foundational AI techniques. My primary technical focus lies in Python, PostgreSQL, JavaScript, and AI/Machine Learning, where I continue to develop my expertise in building efficient and scalable solutions.
 			</p>
