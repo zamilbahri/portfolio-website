@@ -60,7 +60,7 @@ const intro = () => {
         <span className="font-bold">Software Developer</span> and{" "}
         <span className="font-bold">Data Engineer</span>. I enjoy
         working with <span className="italic">servers, data & databases</span>. My focus is{" "}
-        <span className="underline">Python, Java, and C++</span>.
+        <span className="underline">Python, Javascript, and AI</span>.
       </motion.h1>
 
 			<motion.div
