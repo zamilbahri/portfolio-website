@@ -3,6 +3,7 @@
 import About from "@/components/about";
 import Intro from "@/components/intro";
 import SectionDivider from "@/components/section-divider";
+import WorkInProgress from "@/components/wip";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
 			<Intro />
 			<SectionDivider />
 			<About />
+			<WorkInProgress />
 		</main>
   );
 }
