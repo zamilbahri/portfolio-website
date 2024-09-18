@@ -61,7 +61,7 @@ const Intro = () => {
         <span className="font-bold">Hello, I'm Zamil.</span> I'm a{' '}
         <span className="font-bold">Software Developer</span> and{' '}
         <span className="font-bold">Data Engineer</span>. I enjoy working with{' '}
-        <span className="italic">servers, data & databases</span>. My focus is{' '}
+        <span className="italic">servers & data</span>. My focus is{' '}
         <span className="underline">Python, Javascript, and AI</span>.
       </motion.h1>
 
