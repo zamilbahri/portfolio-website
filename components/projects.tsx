@@ -1,23 +1,38 @@
-import React from 'react'
-import SectionHeading from './section-heading'
-import { projectsData } from '@/lib/data'
-import Project from './project'
+'use client';
+
+import React, { useEffect } from 'react';
+import SectionHeading from './section-heading';
+import { projectsData } from '@/lib/data';
+import Project from './project';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from './active-section-context';
 
 const Projects = () => {
-	return (
-		<section id="projects" className='mb-28 text-center scroll-mt-28 '>
-			<SectionHeading>My Projects</SectionHeading>
-			<div>
-				{
-					projectsData.map((project, index) => (
-						<React.Fragment key={index}>
-							<Project {...project} />
-						</React.Fragment>
-					))
-				}
-			</div>
-		</section>
-	)
-}
+  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { setActiveSection } = useActiveSectionContext();
 
-export default Projects
+  useEffect(() => {
+    if (inView) {
+      setActiveSection('Projects');
+    }
+  }, [inView, setActiveSection]);
+
+  return (
+    <section
+      ref={ref}
+      id="projects"
+      className="mb-28 text-center scroll-mt-28 "
+    >
+      <SectionHeading>My Projects</SectionHeading>
+      <div>
+        {projectsData.map((project, index) => (
+          <React.Fragment key={index}>
+            <Project {...project} />
+          </React.Fragment>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
