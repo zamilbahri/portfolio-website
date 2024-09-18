@@ -1,24 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
 
-import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs';
 import Link from 'next/link';
 import { HiDownload } from 'react-icons/hi';
-import { useInView } from 'react-intersection-observer';
-import { useActiveSectionContext } from './active-section-context';
+import { useSectionInView } from '@/lib/hooks';
 
 const Intro = () => {
-  const { ref, inView } = useInView({ threshold: 0.5 });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection('Home');
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  const { ref } = useSectionInView('Home', 0.5);
 
   return (
     <section
