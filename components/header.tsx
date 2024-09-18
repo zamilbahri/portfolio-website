@@ -1,13 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { links } from '@/lib/data';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { useActiveSectionContext } from './active-section-context';
 
 const Header = () => {
-  const [activeSection, setActiveSection] = useState('Home');
+  const { activeSection, setActiveSection } = useActiveSectionContext();
 
   return (
     <header className="z-[999] relative">
@@ -40,7 +41,7 @@ const Header = () => {
 
                 {link.name === activeSection && (
                   <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10"
+                    className="bg-gray-200 rounded-full absolute inset-0 -z-10"
                     layoutId="activeSection"
                     transition={{
                       type: 'spring',
