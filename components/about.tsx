@@ -35,8 +35,7 @@ const About = () => {
         storage, photo library, VPN, and network-wide ad-blocker, all powered by
         Docker. When I'm not immersed in tech, I enjoy reading fantasy
         novels—currently captivated by the Stormlight Archive series—and spend
-        my free time playing narrative-driven video games, Overwatch, and
-        badminton.
+        my free time playing narrative-driven video games and badminton.
       </p>
     </motion.section>
   );
