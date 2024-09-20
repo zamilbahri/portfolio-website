@@ -33,13 +33,10 @@ const Contact = () => {
         Please contact me through this form.
       </p>
 
-      <form
-        className="mt-10 flex flex-col"
-        action={async (formData) => await sendEmail(formData)}
-      >
+      <form className="mt-10 flex flex-col" action={sendEmail}>
         <input
           className="h-14 p-4 rounded-lg border borderBlack"
-          name="senderEmail"
+          name="email"
           type="email"
           placeholder="Your email"
           required
@@ -50,7 +47,7 @@ const Contact = () => {
           name="message"
           placeholder="Your message"
           required
-          maxLength={500}
+          maxLength={5000}
         />
         <button
           type="submit"
