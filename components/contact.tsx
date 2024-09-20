@@ -35,7 +35,7 @@ const Contact = () => {
       </p>
 
       <form
-        className="mt-10 flex flex-col"
+        className="mt-10 flex flex-col items-center"
         action={async (formData) => {
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           const { data, error } = await sendEmail(formData);
@@ -49,7 +49,7 @@ const Contact = () => {
         }}
       >
         <input
-          className="h-14 p-4 rounded-lg border borderBlack"
+          className="h-14 p-4 rounded-lg border borderBlack w-full"
           name="email"
           type="email"
           placeholder="Your email"
@@ -57,7 +57,7 @@ const Contact = () => {
           maxLength={500}
         />
         <textarea
-          className="h-52 p-4 my-3 roundedlg borderBlack"
+          className="h-52 p-4 my-3 roundedlg borderBlack w-full"
           name="message"
           placeholder="Your message"
           required
