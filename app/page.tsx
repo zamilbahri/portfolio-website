@@ -19,7 +19,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Contact />
-      <WorkInProgress />
+      {/* <WorkInProgress /> */}
     </main>
   );
 }
