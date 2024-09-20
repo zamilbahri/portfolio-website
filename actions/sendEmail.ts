@@ -4,10 +4,11 @@ import { getErrorMessage, validateString } from '@/lib/utils';
 import { Resend } from 'resend';
 import ContactFormEmail from '@/email/contact-form-email';
 import React from 'react';
+import { EmailResponse } from '@/lib/types';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const sendEmail = async (formData: FormData) => {
+const sendEmail = async (formData: FormData): Promise<EmailResponse> => {
   const senderEmail = formData.get('email');
   const message = formData.get('message');
 
@@ -24,33 +25,26 @@ const sendEmail = async (formData: FormData) => {
     };
   }
 
-  let response;
   try {
-    response = await resend.emails.send({
+    const response = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
       to: 'zamilbahri@gmail.com',
       subject: `Message from ${senderEmail}`,
       replyTo: senderEmail as string,
-      // using Ract.createElement because want to keep file as tsx
+      // using React.createElement because want to keep file as ts
       react: React.createElement(ContactFormEmail, {
         message: message as string,
         senderEmail: senderEmail as string,
       }),
     });
-  } catch (error: unknown) {
-    return {
-      error: getErrorMessage(error),
-    };
-  }
-  const { data, error } = response;
 
-  // this error comes from resend, not email validation
-  if (data) {
-    console.log(data);
-    return {
-      data,
-    };
-  } else {
+    if (response.error) {
+      return { error: response.error.message };
+    }
+
+    return { data: response.data };
+  } catch (error: unknown) {
+    console.error('Error sending email:', error);
     return {
       error: getErrorMessage(error),
     };
