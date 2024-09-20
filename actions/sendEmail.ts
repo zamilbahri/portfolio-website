@@ -24,9 +24,9 @@ const sendEmail = async (formData: FormData) => {
     };
   }
 
-  let data;
+  let response;
   try {
-    data = await resend.emails.send({
+    response = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
       to: 'zamilbahri@gmail.com',
       subject: `Message from ${senderEmail}`,
@@ -42,10 +42,19 @@ const sendEmail = async (formData: FormData) => {
       error: getErrorMessage(error),
     };
   }
+  const { data, error } = response;
 
-  return {
-    data,
-  };
+  // this error comes from resend, not email validation
+  if (data) {
+    console.log(data);
+    return {
+      data,
+    };
+  } else {
+    return {
+      error: getErrorMessage(error),
+    };
+  }
 };
 
 export default sendEmail;
