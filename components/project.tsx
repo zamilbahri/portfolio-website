@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { projectsData } from '@/lib/data';
-import React, { useRef } from 'react';
-import Image from 'next/image';
-import { useScroll, motion, useTransform } from 'framer-motion';
+import { projectsData } from "@/lib/data";
+import React, { useRef } from "react";
+import Image from "next/image";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -12,7 +12,7 @@ const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['0 1', '1.33 1'],
+    offset: ["0 1", "1.33 1"],
   });
 
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
@@ -25,18 +25,18 @@ const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-3 last:mb-0 sm:mb-8"
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem] text-left mb-3 sm:mb-8 last:mb-0 sm:group-even:pl-8 hover:bg-gray-200 transition dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] sm:h-[20rem] flex flex-col h-full sm:group-even:ml-[18rem]">
+      <section className="relative mb-3 max-w-[42rem] overflow-hidden border border-black/5 bg-gray-100 text-left transition last:mb-0 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 sm:mb-8 sm:h-[20rem] sm:pr-8 sm:group-even:pl-8">
+        <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:h-[20rem] sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+          <ul className="mt-4 flex flex-wrap gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                className="rounded-full bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white dark:text-white/70"
                 key={index}
               >
                 {tag}
@@ -48,17 +48,7 @@ const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
           src={imageUrl}
           alt="Project I worked on"
           quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-					transition
-					group-hover:scale-[1.04]
-					group-hover:-translate-x-3
-					group-hover:translate-y-3
-					group-hover:-rotate-2
-					group-even:group-hover:translate-x-3
-					group-even:group-hover:translate-y-3
-					group-even:group-hover:rotate-2
-					group-even:right-[initial]
-					group-even:-left-40"
+          className="absolute -right-40 top-8 hidden w-[28.25rem] rounded-t-lg shadow-2xl transition group-even:-left-40 group-even:right-[initial] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-[1.04] group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 sm:block"
         />
       </section>
     </motion.div>

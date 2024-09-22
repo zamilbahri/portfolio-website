@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import clsx from 'clsx';
-import { links } from '@/lib/data';
-import { Menu } from 'lucide-react';
-import { MobileHeaderProps } from '@/lib/types';
+import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import clsx from "clsx";
+import { links } from "@/lib/data";
+import { Menu } from "lucide-react";
+import { MobileHeaderProps } from "@/lib/types";
 
 const MobileHeader: React.FC<MobileHeaderProps> = ({
   activeSection,
@@ -16,8 +16,8 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
   toggleMenu,
 }) => {
   return (
-    <nav className="flex fixed top-0 left-0 w-full h-[4.5rem] items-center justify-between px-4 bg-white bg-opacity-80 dark:bg-gray-950 dark:bg-opacity-75 backdrop-blur-[0.5rem] z-[999]">
-      <div className="text-center flex-grow font-medium">{activeSection}</div>
+    <nav className="fixed left-0 top-0 z-[999] flex h-[4.5rem] w-full items-center justify-between bg-white bg-opacity-80 px-4 backdrop-blur-[0.5rem] dark:bg-gray-950 dark:bg-opacity-75">
+      <div className="flex-grow text-center font-medium">{activeSection}</div>
       <button
         onClick={toggleMenu}
         className="text-gray-500 hover:text-gray-950 dark:hover:text-gray-300"
@@ -26,7 +26,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
       </button>
       {isMenuOpen && (
         <motion.div
-          className="fixed top-[4.5rem] left-0 w-full bg-white dark:bg-gray-950 shadow-lg"
+          className="fixed left-0 top-[4.5rem] w-full bg-white shadow-lg dark:bg-gray-950"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -35,11 +35,11 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
               <li key={link.hash} className="w-full">
                 <Link
                   className={clsx(
-                    'block px-4 py-2 text-gray-500 hover:text-gray-950 dark:hover:text-gray-300',
+                    "block px-4 py-2 text-gray-500 hover:text-gray-950 dark:hover:text-gray-300",
                     {
-                      'text-gray-950 dark:text-gray-200 bg-gray-100 dark:bg-gray-800':
+                      "bg-gray-100 text-gray-950 dark:bg-gray-800 dark:text-gray-200":
                         activeSection === link.name,
-                    }
+                    },
                   )}
                   href={link.hash}
                   onClick={() => {

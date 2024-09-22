@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import React from 'react';
-import SectionHeading from './section-heading';
-import { useSectionInView } from '@/lib/hooks';
-import { motion } from 'framer-motion';
-import sendEmail from '@/actions/sendEmail';
-import SubmitBtn from './submit-btn';
-import toast from 'react-hot-toast';
+import React from "react";
+import SectionHeading from "./section-heading";
+import { useSectionInView } from "@/lib/hooks";
+import { motion } from "framer-motion";
+import sendEmail from "@/actions/sendEmail";
+import SubmitBtn from "./submit-btn";
+import toast from "react-hot-toast";
 
 const Contact = () => {
-  const { ref } = useSectionInView('Contact');
+  const { ref } = useSectionInView("Contact");
 
   return (
     <motion.section
       id="contact"
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="mb-20 w-[min(100%,38rem)] text-center sm:mb-28"
       ref={ref}
       initial={{
         opacity: 0,
@@ -30,7 +30,7 @@ const Contact = () => {
       }}
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
+      <p className="-mt-6 text-gray-700 dark:text-white/80">
         Please contact me through this form.
       </p>
 
@@ -45,11 +45,11 @@ const Contact = () => {
             return;
           }
 
-          toast.success('Email sent successfully!');
+          toast.success("Email sent successfully!");
         }}
       >
         <input
-          className="h-14 p-4 rounded-lg border borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all w-full"
+          className="borderBlack h-14 w-full rounded-lg border p-4 transition-all dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100"
           name="email"
           type="email"
           placeholder="Your email"
@@ -57,7 +57,7 @@ const Contact = () => {
           maxLength={500}
         />
         <textarea
-          className="h-52 p-4 my-3 roundedlg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all w-full"
+          className="roundedlg borderBlack my-3 h-52 w-full p-4 transition-all dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100"
           name="message"
           placeholder="Your message"
           required
