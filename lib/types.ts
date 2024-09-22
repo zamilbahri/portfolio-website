@@ -17,3 +17,5 @@ export type EmailResponse = {
   data?: { id: string } | null;
   error?: string;
 };
+
+export type Theme = 'light' | 'dark';
