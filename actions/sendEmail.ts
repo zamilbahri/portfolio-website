@@ -2,14 +2,16 @@
 
 import {
   getErrorMessage,
-  validateCaptcha,
   validateString,
-  verifyCaptchaToken,
-} from "@/lib/utils";
+} from "@/lib/utils/contact-input-validation";
 import { Resend } from "resend";
 import ContactFormEmail from "@/email/contact-form-email";
 import React from "react";
 import { EmailResponse } from "@/lib/types";
+import {
+  validateCaptcha,
+  verifyCaptchaToken,
+} from "@/lib/utils/recaptcha-validation";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

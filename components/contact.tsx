@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import sendEmail from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
-import { getCatpchaToken } from "@/lib/utils";
+import { getCatpchaToken } from "@/lib/utils/recaptcha-validation";
 
 const Contact = () => {
   const { ref } = useSectionInView("Contact");
