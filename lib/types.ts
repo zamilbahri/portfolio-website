@@ -28,3 +28,11 @@ export type ThemeContextType = {
   theme: Theme;
   toggleTheme: () => void;
 };
+
+export type MobileHeaderProps = {
+  activeSection: SectionName;
+  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+  setTimeOfLastClick: (time: number) => void;
+  isMenuOpen: boolean;
+  toggleMenu: () => void;
+};

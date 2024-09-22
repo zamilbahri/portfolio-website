@@ -1,15 +1,43 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { links } from '@/lib/data';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { useActiveSectionContext } from '@/context/active-section-context';
+import MobileHeader from './mobile-header';
 
 const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  if (isMobile) {
+    return (
+      <MobileHeader
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+        setTimeOfLastClick={setTimeOfLastClick}
+        isMenuOpen={isMenuOpen}
+        toggleMenu={toggleMenu}
+      />
+    );
+  }
 
   return (
     <header className="z-[999] relative">
@@ -43,7 +71,6 @@ const Header = () => {
                 }}
               >
                 {link.name}
-
                 {link.name === activeSection && (
                   <motion.span
                     className="bg-gray-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
