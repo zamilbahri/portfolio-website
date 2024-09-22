@@ -7,9 +7,20 @@ export default function Footer() {
         &copy; 2024 Zamil. All rights reserved.
       </small>
       <p className="text-xs">
-        <span className="font-semibold">About this website:</span> built with
-        React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS,
-        Framer Motion, React Email, and Resend. Hosted on a Raspberry Pi.
+        <span className="font-semibold"></span>Built with React & Next.js (App
+        Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React
+        Email, and Resend. Hosted on a Raspberry Pi.
+      </p>
+      <p className="text-xs">
+        This site is protected by reCAPTCHA and the Google{" "}
+        <a className="underline" href="https://policies.google.com/privacy">
+          Privacy Policy
+        </a>{" "}
+        and{" "}
+        <a className="underline" href="https://policies.google.com/terms">
+          Terms of Service
+        </a>{" "}
+        apply.
       </p>
     </footer>
   );
