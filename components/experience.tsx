@@ -1,7 +1,6 @@
 'use client';
 
 import { useSectionInView } from '@/lib/hooks';
-import React from 'react';
 import SectionHeading from './section-heading';
 import 'react-vertical-timeline-component/style.min.css';
 import { experiencesData } from '@/lib/data';
@@ -10,9 +9,12 @@ import {
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { useTheme } from '@/context/theme-context';
+import React from 'react';
 
 const Experience = () => {
   const { ref, inView } = useSectionInView('Experience', 0.25);
+  const { theme } = useTheme();
 
   return (
     <section
@@ -27,7 +29,8 @@ const Experience = () => {
             <VerticalTimelineElement
               visible={inView}
               contentStyle={{
-                background: '#f3f4f6',
+                background:
+                  theme === 'light' ? '#f3f4f6' : 'rgba(255, 255, 255, 0.05)',
                 boxShadow: 'none',
                 border: '1px solid rgb(0, 0, 0, 0.05)',
                 textAlign: 'left',
