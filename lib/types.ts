@@ -1,6 +1,6 @@
-import { links } from './data';
+import { links } from "./data";
 
-export type SectionName = (typeof links)[number]['name'];
+export type SectionName = (typeof links)[number]["name"];
 
 export type ActiveSectionContextProviderProps = {
   children: React.ReactNode;
@@ -18,7 +18,7 @@ export type EmailResponse = {
   error?: string;
 };
 
-export type Theme = 'light' | 'dark';
+export type Theme = "light" | "dark";
 
 export type ThemeContextProviderProps = {
   children: React.ReactNode;
@@ -36,3 +36,16 @@ export type MobileHeaderProps = {
   isMenuOpen: boolean;
   toggleMenu: () => void;
 };
+
+export type CaptchaData =
+  | {
+      success: true;
+      challenge_ts: string;
+      hostname: string;
+      score: number;
+      action: string;
+    }
+  | {
+      success: false;
+      "error-codes": string[];
+    };

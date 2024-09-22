@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import sendEmail from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
+import { getCatpchaToken } from "@/lib/utils";
 
 const Contact = () => {
   const { ref } = useSectionInView("Contact");
@@ -37,8 +38,9 @@ const Contact = () => {
       <form
         className="mt-10 flex flex-col items-center dark:text-black/80"
         action={async (formData) => {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          const { data, error } = await sendEmail(formData);
+          const token = await getCatpchaToken();
+          console.log(token);
+          const { error } = await sendEmail(token, formData);
 
           if (error) {
             toast.error(error);
@@ -57,7 +59,7 @@ const Contact = () => {
           maxLength={500}
         />
         <textarea
-          className="roundedlg borderBlack my-3 h-52 w-full p-4 transition-all dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100"
+          className="borderBlack my-3 h-52 w-full rounded-lg p-4 transition-all dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100"
           name="message"
           placeholder="Your message"
           required
