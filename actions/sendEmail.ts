@@ -2,6 +2,7 @@
 
 import {
   getErrorMessage,
+  validateCaptcha,
   validateString,
   verifyCaptchaToken,
 } from "@/lib/utils";
@@ -24,21 +25,9 @@ const sendEmail = async (
 
   // verify recaptcha token
   const captchaData = await verifyCaptchaToken(token);
-
-  if (!captchaData) {
-    return {
-      error:
-        "CaptchaData is null (server issue). Please try again later when I fix it.",
-    };
-  } else if (!captchaData.success) {
-    return {
-      error:
-        "CaptchaData error (server issue). Please try again later when I fix it.",
-    };
-  } else if (captchaData.success && captchaData.score < 0.5) {
-    return {
-      error: "Captcha Failed. Either you are a bot or acting like one.",
-    };
+  const captchaError = validateCaptcha(captchaData);
+  if (captchaError) {
+    return { error: captchaError };
   }
 
   const senderEmail = formData.get("email");

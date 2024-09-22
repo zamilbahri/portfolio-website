@@ -53,3 +53,18 @@ export const verifyCaptchaToken = async (
 
   return captchaData;
 };
+
+export const validateCaptcha = (
+  captchaData: CaptchaData | null,
+): string | null => {
+  if (!captchaData) {
+    return "reCAPTCHA verification failed. Please try again later.";
+  }
+  if (!captchaData.success) {
+    return "reCAPTCHA verification unsuccessful. Please try again.";
+  }
+  if (captchaData.score < 0.5) {
+    return "reCAPTCHA score too low. Please try again or contact support.";
+  }
+  return null;
+};
