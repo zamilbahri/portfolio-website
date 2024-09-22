@@ -30,12 +30,12 @@ const Contact = () => {
       }}
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <p className="text-gray-700 -mt-6">
+      <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me through this form.
       </p>
 
       <form
-        className="mt-10 flex flex-col items-center"
+        className="mt-10 flex flex-col items-center dark:text-black/80"
         action={async (formData) => {
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           const { data, error } = await sendEmail(formData);
@@ -49,7 +49,7 @@ const Contact = () => {
         }}
       >
         <input
-          className="h-14 p-4 rounded-lg border borderBlack w-full"
+          className="h-14 p-4 rounded-lg border borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all w-full"
           name="email"
           type="email"
           placeholder="Your email"
@@ -57,7 +57,7 @@ const Contact = () => {
           maxLength={500}
         />
         <textarea
-          className="h-52 p-4 my-3 roundedlg borderBlack w-full"
+          className="h-52 p-4 my-3 roundedlg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all w-full"
           name="message"
           placeholder="Your message"
           required
