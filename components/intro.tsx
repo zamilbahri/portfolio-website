@@ -85,20 +85,23 @@ const Intro = () => {
           Contact me{" "}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
         </Link>
-        <a
-          href="https://www.linkedin.com/in/zamil-bahri/"
-          className="borderBlack flex items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 dark:hover:text-gray-200"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-        <a
-          href="https://github.com/zamilbahri"
-          className="borderBlack flex items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 dark:hover:text-gray-200"
-          target="_blank"
-        >
-          <BsGithub />
-        </a>
+				
+        <div className="flex flex-row gap-2">
+					<a
+						href="https://www.linkedin.com/in/zamil-bahri/"
+						className="borderBlack flex items-center rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 dark:hover:text-gray-200"
+						target="_blank"
+					>
+						<BsLinkedin />
+					</a>
+					<a
+						href="https://github.com/zamilbahri"
+						className="borderBlack flex items-center rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 dark:hover:text-gray-200"
+						target="_blank"
+					>
+						<BsGithub />
+					</a>
+				</div>
       </motion.div>
     </section>
   );
