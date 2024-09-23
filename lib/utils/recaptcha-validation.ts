@@ -48,10 +48,10 @@ export const validateCaptcha = (
     return "reCAPTCHA verification failed. Please try again later.";
   }
   if (!captchaData.success) {
-    return "reCAPTCHA verification unsuccessful. Please try again.";
+    return "reCAPTCHA verification unsuccessful. Please try again later.";
   }
   if (captchaData.score < 0.5) {
-    return "reCAPTCHA score too low. Please try again or contact support.";
+    return "reCAPTCHA score too low. Please try again.";
   }
   return null;
 };
