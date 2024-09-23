@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
-import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -83,17 +82,9 @@ const Intro = () => {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          Contact me{" "}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
         </Link>
-        <a
-          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
-          href="/resume.pdf"
-          download
-        >
-          Download Résumé{" "}
-          <HiDownload className="opacity-90 transition group-hover:translate-y-1" />
-        </a>
         <a
           href="https://www.linkedin.com/in/zamil-bahri/"
           className="borderBlack flex items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 dark:hover:text-gray-200"
