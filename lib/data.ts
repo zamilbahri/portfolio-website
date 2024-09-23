@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
@@ -35,28 +35,44 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Diploma, Electronics Engineering Technician",
+    location: "Cambridge, ON",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Developed hands-on expertise in electronics, including the use of multimeters and oscilloscopes for circuit troubleshooting, gained experience in programming microcontrollers, and honed skills in using a soldering iron for assembling and repairing electronic components.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2018 - 2020",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Electronics Assembler",
+    location: "Kitchener, ON",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Soldered, tested, and troubleshot components on PCBs to a professional standard, while automating circuit board testing using Arduinos and proprietary software.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2019, 2020",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "BSc, Computer Science and Physics",
+    location: "Waterloo, ON",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Acquired both theoretical and practical knowledge in computer science, with a focus on the software development, parallel programming, and machine learning. Additionally, developed strong mathematical proficiency and practical problem-solving skills through the study of physics.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2020 - 2023 ",
+  },
+  {
+    title: "Data Engineering Intern",
+    location: "Chicago, IL",
+    description:
+      "Built and maintained robust ETL pipelines to handle large health datasets. Conducted thorough data cleaning and preprocessing, and utilized AI and machine learning models for predictive analysis and data modeling. Developed backend REST APIs for internal use by front-end teams.",
+    icon: React.createElement(FaPython),
+    date: "2020 - 2023",
+  },
+  {
+    title: "Product Support Specialist",
+    location: "Waterloo, ON",
+    description:
+      "Diagnosed and resolved technical issues with a cloud-based backup service across various operating systems, while handling sensitive information in accordance with proper procedures. Proactively pursued knowledge of backend processes and technologies to gain a deeper understanding of the service beyond my role.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2023 - Present",
   },
 ] as const;
 
@@ -85,23 +101,31 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
+  "Python",
+  "NumPy",
+  "Pandas",
+  "Scikit-learn",
+  "PyTorch",
+  "MPI",
+  "Flask",
+  "PostgreSQL",
+  "MySQL",
+  "C",
+  "C++",
+  "OpenCL",
+  "OpenGL",
+  "Java",
   "HTML",
   "CSS",
-  "JavaScript",
+  "Tailwind",
+  "Javascript",
   "TypeScript",
-  "React",
-  "Next.js",
   "Node.js",
   "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  "Docker",
+  "Linux",
+  "Ubuntu",
+  "Nginx",
+  "Cloudfare",
+  "AWS",
 ] as const;
