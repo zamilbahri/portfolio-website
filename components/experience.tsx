@@ -60,7 +60,7 @@ const ExperienceElement = ({ theme, item }: ExperienceElementProps) => {
 };
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Experience", 0.5);
   const { theme } = useTheme();
   return (
     <section
