@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaPython } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import dashboard from "@/public/home_server_dashboard.jpg";
+import starlightFlux from "@/public/starlight-flux.jpg";
+import juliaRender from "@/public/parallel-julia.png";
 
 export const links = [
   {
@@ -78,25 +78,25 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Home Server",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Self-hosted containerized services such as a Media Library, AdBlocker, NAS, which are securely exposed to the internet using VPNs, Cloudfare tunnels and proxy managers.",
+    tags: ["Docker", "Linux", "VPN", "Nginx", "Cloudfare"],
+    imageUrl: dashboard,
   },
   {
-    title: "rmtDev",
+    title: "Exoplanet Detector",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "A machine learning approach to detect exoplanets based on variation in starlight flux. Trained on datasets gathered by NASA.",
+    tags: ["Python", "Numpy", "Pandas", "Scikit-learn", "Machine Learning"],
+    imageUrl: starlightFlux,
   },
   {
-    title: "Word Analytics",
+    title: "Parallel Julia Set Generation",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Generation of Julia Sets at various c-values using a multithreaded approach, using OpenMP to leverage HPC. GPU resources also utilized.",
+    tags: ["Python", "C", "Multithreading", "MPI/OpenMP", "OpenCL", "OpenGL"],
+    imageUrl: juliaRender,
   },
 ] as const;
 
@@ -104,11 +104,11 @@ export const skillsData = [
   "Python",
   "NumPy",
   "Pandas",
-  "Scikit-learn",
-  "PyTorch",
-  "MPI",
   "Flask",
   "PostgreSQL",
+  "Scikit-learn",
+  "PyTorch",
+  "MPI/OpenMP",
   "MySQL",
   "C",
   "C++",
