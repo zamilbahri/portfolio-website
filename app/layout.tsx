@@ -40,11 +40,8 @@ export default function RootLayout({
           strategy="beforeInteractive"
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECPATCHA_SITE_KEY}`}
         />
-        {/* <div className="absolute right-[5vw] top-[5vw] -z-10 h-[40vw] max-h-[31.25rem] w-[40vw] max-w-[31.25rem] rounded-full bg-[#fbe2e3] blur-[5rem] dark:bg-[#946263] sm:h-[50vw] sm:w-[50vw] sm:blur-[10rem] md:right-[5vw] lg:right-[10vw] xl:right-[15vw] 2xl:right-[20vw]"></div> */}
-        {/* <div className="absolute left-[-20vw] top-[5vw] -z-10 h-[40vw] max-h-[31.25rem] w-[40vw] max-w-[50rem] rounded-full bg-[#dbd7fb] blur-[5rem] dark:bg-[#676394] sm:h-[50vw] sm:w-[50vw] sm:blur-[10rem] md:left-[-15vw] lg:left-[-10vw] xl:left-[-5vw] 2xl:left-0"></div> */}
-        <div className="absolute left-1/2 top-[5vw] -z-10 h-[40vw] max-h-[31.25rem] w-[40vw] max-w-[50rem] translate-x-0 transform rounded-full bg-[#fbe2e3] blur-[5rem] dark:bg-[#946263] sm:h-[45vw] sm:w-[45vw] sm:blur-[7rem] md:blur-[9rem] lg:blur-[10rem]"></div>
-        <div className="absolute left-1/2 top-[5vw] -z-10 h-[40vw] max-h-[31.25rem] w-[40vw] max-w-[50rem] translate-x-[-100%] transform rounded-full bg-[#dbd7fb] blur-[5rem] dark:bg-[#676394] sm:h-[45vw] sm:w-[45vw] sm:blur-[7rem] md:blur-[9rem] lg:blur-[10rem]"></div>
-        {/* <div className="absolute left-1/2 top-[5vw] -z-10 h-[40vw] max-h-[31.25rem] w-[40vw] max-w-[50rem] translate-x-[-100%] transform rounded-full bg-[#dbd7fb] dark:bg-[#676394] sm:h-[45vw] sm:w-[45vw] md:left-[-15vw] lg:left-[-10vw] xl:left-[-5vw] 2xl:left-0"></div> */}
+        <div className="absolute left-1/2 top-[5vw] -z-10 h-[45vw] max-h-[31.25rem] w-[40vw] max-w-[50rem] translate-x-0 transform rounded-full bg-[#fbe2e3] blur-[5rem] dark:bg-[#946263] sm:h-[45vw] sm:blur-[7rem] md:blur-[9rem] lg:blur-[10rem]"></div>
+        <div className="absolute left-1/2 top-[5vw] -z-10 h-[45vw] max-h-[31.25rem] w-[40vw] max-w-[50rem] translate-x-[-100%] transform rounded-full bg-[#dbd7fb] blur-[5rem] dark:bg-[#676394] sm:h-[45vw] sm:blur-[7rem] md:blur-[9rem] lg:blur-[10rem]"></div>
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
