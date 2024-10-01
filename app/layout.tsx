@@ -40,8 +40,8 @@ export default function RootLayout({
           strategy="beforeInteractive"
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECPATCHA_SITE_KEY}`}
         />
-        <div className="absolute right-0 top-[-6rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#fbe2e3] blur-[10rem] dark:bg-[#946263] sm:w-[68.75rem]"></div>
-        <div className="absolute right-[-35rem] top-[-1rem] -z-10 h-[31.25rem] w-[50rem] rounded-full bg-[#dbd7fb] blur-[10rem] dark:bg-[#676394] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+        <div className="absolute left-1/2 top-[5vw] -z-10 h-[45vw] max-h-[31.25rem] w-[40vw] max-w-[50rem] translate-x-0 transform rounded-full bg-[#fbe2e3] blur-[5rem] dark:bg-[#946263] sm:h-[45vw] sm:blur-[7rem] md:blur-[9rem] lg:blur-[10rem]"></div>
+        <div className="absolute left-1/2 top-[5vw] -z-10 h-[45vw] max-h-[31.25rem] w-[40vw] max-w-[50rem] translate-x-[-100%] transform rounded-full bg-[#dbd7fb] blur-[5rem] dark:bg-[#676394] sm:h-[45vw] sm:blur-[7rem] md:blur-[9rem] lg:blur-[10rem]"></div>
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

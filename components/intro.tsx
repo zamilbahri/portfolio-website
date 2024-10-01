@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
-import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -63,8 +62,7 @@ const Intro = () => {
         <span className="font-bold">Hello, I'm Zamil.</span> I'm a{" "}
         <span className="font-bold">Software Developer</span> and{" "}
         <span className="font-bold">Data Engineer</span>. I enjoy working with
-        servers & analyzing data. My focus is{" "}
-        <span className="underline">Python, Javascript, and AI</span>.
+        servers, analyzing data, and backend development.
       </motion.h1>
 
       <motion.div
@@ -83,31 +81,26 @@ const Intro = () => {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          Contact me{" "}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
         </Link>
-        <a
-          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
-          href="/resume.pdf"
-          download
-        >
-          Download Résumé{" "}
-          <HiDownload className="opacity-90 transition group-hover:translate-y-1" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/zamil-bahri/"
-          className="borderBlack flex items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 dark:hover:text-gray-200"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-        <a
-          href="https://github.com/zamilbahri"
-          className="borderBlack flex items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 dark:hover:text-gray-200"
-          target="_blank"
-        >
-          <BsGithub />
-        </a>
+
+        <div className="flex flex-row gap-2">
+          <a
+            href="https://www.linkedin.com/in/zamil-bahri/"
+            className="borderBlack flex items-center rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 dark:hover:text-gray-200"
+            target="_blank"
+          >
+            <BsLinkedin />
+          </a>
+          <a
+            href="https://github.com/zamilbahri"
+            className="borderBlack flex items-center rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 dark:hover:text-gray-200"
+            target="_blank"
+          >
+            <BsGithub />
+          </a>
+        </div>
       </motion.div>
     </section>
   );
