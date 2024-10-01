@@ -39,7 +39,6 @@ const Contact = () => {
         className="mt-10 flex flex-col items-center dark:text-black/80"
         action={async (formData) => {
           const token = await getCatpchaToken();
-          console.log(token);
           const { error } = await sendEmail(token, formData);
 
           if (error) {
