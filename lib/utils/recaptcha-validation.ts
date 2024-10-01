@@ -37,7 +37,7 @@ export const verifyCaptchaToken = async (
   const captchaData = await res.json();
 
   if (!res.ok) return null;
-
+  console.log(captchaData);
   return captchaData;
 };
 
