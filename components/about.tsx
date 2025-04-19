@@ -22,10 +22,12 @@ const About = () => {
         I hold a BSc in Computer Science and Physics, with a diploma in
         Electronics Engineering. My professional experience includes a data
         engineering internship, where I honed my skills in backend development,
-        ETL operations, and data analysis, using foundational AI techniques. My
-        primary technical focus lies in Python, PostgreSQL, JavaScript, and
-        AI/Machine Learning, where I continue to develop my expertise in
-        building efficient and scalable solutions.
+        ETL operations, and data analysis, using foundational AI techniques.
+        Additionally, I have a background in electronics engineering, where I
+        designed and assembled PCBs, programmed microcontrollers, and developed
+        test automation solutions. My primary technical focus lies in Python,
+        PostgreSQL, JavaScript, and AI/Machine Learning, where I continue to
+        develop my expertise in building efficient and scalable solutions.
       </p>
       <br></br>
       <p>

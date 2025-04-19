@@ -43,10 +43,10 @@ export const experiencesData = [
     date: "2018 - 2020",
   },
   {
-    title: "Electronics Assembler",
+    title: "Electronics Test Engineer",
     location: "Kitchener, ON",
     description:
-      "Soldered, tested, and troubleshot components on PCBs to a professional standard, while automating circuit board testing using Arduinos and proprietary software.",
+      "Designed and assembled PCBs using Altium Designer and manual soldering, programmed TI MSP430 microcontrollers in C with low-level hardware control, and developed Python-based test automation on a Raspberry Pi, improving testing efficiency tenfold while ensuring hardware integrity through manual validation.",
     icon: React.createElement(CgWorkAlt),
     date: "2019, 2020",
   },
@@ -59,7 +59,7 @@ export const experiencesData = [
     date: "2020 - 2023 ",
   },
   {
-    title: "Data Engineering Intern",
+    title: "Data and Backend Engineer",
     location: "Chicago, IL",
     description:
       "Built and maintained robust ETL pipelines to handle large health datasets. Conducted thorough data cleaning and preprocessing, and utilized AI and machine learning models for predictive analysis and data modeling. Developed backend REST APIs for internal use by front-end teams.",
@@ -70,7 +70,7 @@ export const experiencesData = [
     title: "Product Support Specialist",
     location: "Waterloo, ON",
     description:
-      "Diagnosed and resolved technical issues with a cloud-based backup service across various operating systems, while handling sensitive information in accordance with proper procedures. Proactively pursued knowledge of backend processes and technologies to gain a deeper understanding of the service beyond my role.",
+      "Diagnosed and resolved technical issues with a cloud-based backup and cybsersecurity software across various operating systems, while handling sensitive information in accordance with proper procedures.",
     icon: React.createElement(CgWorkAlt),
     date: "2023 - Present",
   },
