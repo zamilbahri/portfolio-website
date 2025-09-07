@@ -20,24 +20,34 @@ export const getCatpchaToken = () => {
 export const verifyCaptchaToken = async (
   token: string,
 ): Promise<CaptchaData | null> => {
-  const secretKey = process.env.RECPATCHA_SECRET_KEY;
+  if (!token) {
+    console.log("reCAPTCHA: no token provided to verifyCaptchaToken");
+    return null;
+  }
 
+  const secretKey = process.env.RECPATCHA_SECRET_KEY;
   if (!secretKey) {
     throw new Error("No secret key found");
   }
 
-  const url = new URL("https://www.google.com/recaptcha/api/siteverify");
-  url.searchParams.append("secret", secretKey);
-  url.searchParams.append("response", token);
+  const body = new URLSearchParams();
+  body.append("secret", secretKey);
+  body.append("response", token);
 
-  const res = await fetch(url, {
+  const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: body.toString(),
   });
 
   const captchaData = await res.json();
 
+  // Helpful debug logging (remove in production)
+  // console.log("reCAPTCHA token:", token?.slice(0, 10) + "...", "verify response:", captchaData);
+
   if (!res.ok) return null;
-  console.log(captchaData);
   return captchaData;
 };
 
@@ -48,9 +58,13 @@ export const validateCaptcha = (
     return "reCAPTCHA verification failed. Please try again later.";
   }
   if (!captchaData.success) {
-    return "reCAPTCHA verification unsuccessful. Please try again later.";
+    const errors = (captchaData["error-codes"] || []).join(", ");
+    return `reCAPTCHA verification unsuccessful: ${errors || "unknown error"}`;
   }
-  if (captchaData.score < 0.5) {
+  if (captchaData.action && captchaData.action !== "contact") {
+    return `reCAPTCHA action mismatch (got "${captchaData.action}")`;
+  }
+  if (typeof captchaData.score === "number" && captchaData.score < 0.5) {
     return "reCAPTCHA score too low. Please try again.";
   }
   return null;
