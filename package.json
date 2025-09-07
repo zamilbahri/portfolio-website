@@ -9,12 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-email/components": "^0.0.25",
+    "@react-email/components": "^0.5.2",
     "@react-email/tailwind": "^0.1.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.5.4",
     "lucide-react": "^0.445.0",
-    "next": "14.2.11",
+    "next": "^14.2.32",
     "react": "^18",
     "react-dom": "^18",
     "react-google-recaptcha-v3": "^1.10.1",
