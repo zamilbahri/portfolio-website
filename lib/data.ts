@@ -52,7 +52,7 @@ export const experiencesData = [
   },
   {
     title: "BSc, Computer Science and Physics",
-    location: "Waterloo, ON",
+    location: "Wilfrid Laurier University, Waterloo, ON",
     description:
       "Acquired both theoretical and practical knowledge in computer science, with a focus on the software development, parallel programming, and machine learning. Additionally, developed strong mathematical proficiency and practical problem-solving skills through the study of physics.",
     icon: React.createElement(LuGraduationCap),
@@ -67,12 +67,20 @@ export const experiencesData = [
     date: "2020 - 2023",
   },
   {
-    title: "Product Support Specialist",
+    title: "Cybersecurity Support Specialist",
     location: "Waterloo, ON",
     description:
-      "Diagnosed and resolved technical issues with a cloud-based backup and cybsersecurity software across various operating systems, while handling sensitive information in accordance with proper procedures.",
+      "Investigated and resolved technical issues with a cloud-based backup and cybsersecurity software across various operating systems, while handling sensitive information in accordance with proper protocols.",
     icon: React.createElement(CgWorkAlt),
-    date: "2023 - Present",
+    date: "2023 - 2025",
+  },
+  {
+    title: "Masters, Cybersecurity and Threat Intelligence",
+    location: "University of Guelph, Waterloo, ON",
+    description:
+      "Mastered applied cryptography, network defense, exploit development, and threat mitigation to secure enterprise infrastructure.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2026 - 2028",
   },
 ] as const;
 
@@ -81,7 +89,7 @@ export const projectsData = [
     title: "Home Server",
     description:
       "Self-hosted containerized services such as a Media Library, AdBlocker, NAS, which are securely exposed to the internet using VPNs, Cloudfare tunnels and proxy managers.",
-    tags: ["Docker", "Linux", "VPN", "Nginx", "Cloudfare"],
+    tags: ["Proxmox", "Docker", "Kubernetes", "Linux", "Nginx"],
     imageUrl: dashboard,
   },
   {
@@ -106,23 +114,19 @@ export const skillsData = [
   "Pandas",
   "Flask",
   "PostgreSQL",
-  "Scikit-learn",
   "PyTorch",
   "MPI/OpenMP",
-  "MySQL",
   "C",
   "C++",
   "OpenCL",
   "OpenGL",
-  "Java",
-  "HTML",
-  "CSS",
   "Tailwind",
-  "Javascript",
   "TypeScript",
   "Node.js",
   "Git",
+  "Proxmox",
   "Docker",
+  "Kubernetes",
   "Linux",
   "Ubuntu",
   "Nginx",
