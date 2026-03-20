@@ -19,24 +19,26 @@ const About = () => {
     >
       <SectionHeading>About Me</SectionHeading>
       <p>
-        I hold a BSc in Computer Science and Physics, with a diploma in
-        Electronics Engineering. My professional experience includes a data
-        engineering internship, where I honed my skills in backend development,
-        ETL operations, and data analysis, using foundational AI techniques.
-        Additionally, I have a background in electronics engineering, where I
-        designed and assembled PCBs, programmed microcontrollers, and developed
-        test automation solutions. My primary technical focus lies in Python,
-        PostgreSQL, JavaScript, and AI/Machine Learning, where I continue to
-        develop my expertise in building efficient and scalable solutions.
+        My technical roots are a curious mix of Computer Science, Physics, and
+        Electronics Engineering. Currently, I am diving deeper into the digital
+        realm by pursuing a Master's in Cybersecurity. While I have a soft spot
+        for tinkering with low-level code, my everyday building blocks are
+        Python, TypeScript, and data-focused Machine Learning. I enjoy bridging
+        the gap between physical hardware and scalable backend systems.
       </p>
       <br></br>
       <p>
-        Beyond my professional life, I manage a home server running a suite of
-        containerized services, including a media server, personal cloud
-        storage, photo library, VPN, and network-wide ad-blocker, all powered by
-        Docker. When I'm not immersed in tech, I enjoy reading fantasy
-        novels—currently captivated by the Stormlight Archive series—and spend
-        my free time playing narrative-driven video games and badminton.
+        Off the clock, my proudest ongoing project is my homelab. Serving as the
+        caretaker for my own infrastructure, I use Proxmox to host a mix of
+        environments. This setup runs my Kali Linux VMs for cybersecurity CTF
+        labs, alongside Docker and Kubernetes clusters that orchestrate my
+        personal cloud, media server, photo library, VPN, and a network-wide ad
+        blocker.
+      </p>
+      <br></br>
+      <p>
+        When I finally step away from the terminal, I am usually lost in a
+        sprawling fantasy novel or exploring story-driven worlds.
       </p>
     </motion.section>
   );
