@@ -3,7 +3,7 @@ import { CaptchaData } from "@/lib/types";
 export const getCatpchaToken = () => {
   return new Promise<string | null>((resolve) => {
     grecaptcha.ready(async () => {
-      const siteKey = process.env.NEXT_PUBLIC_RECPATCHA_SITE_KEY;
+      const siteKey = process.env.RECAPTCHA_SITE_KEY;
 
       if (!siteKey) {
         resolve(null);
@@ -25,7 +25,7 @@ export const verifyCaptchaToken = async (
     return null;
   }
 
-  const secretKey = process.env.RECPATCHA_SECRET_KEY;
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
   if (!secretKey) {
     throw new Error("No secret key found");
   }
